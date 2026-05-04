@@ -7,8 +7,7 @@ import { scorers } from '../scorers/weather-scorer';
 const openai = createOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
   baseURL: process.env.OPENAI_BASE_URL,
-  compatibility: 'compatible',
-});
+} as any);
 
 export const weatherAgent = new Agent({
   id: 'weather-agent',
